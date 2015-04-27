@@ -1,0 +1,6 @@
+# A list of javascript files required for the project, in dependency order
+javascripts:
+  files:
+    - js/tictactoe.js
+  specs:
+    - spec/tictactoe.spec.js

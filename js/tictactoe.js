@@ -3,10 +3,7 @@ function Game(board) {
 	this.board = board;
 	this.createState();
 }
-function Board() {
-	this.buildBoard();
-	this.addIds();
-}
+function Board() {}
 Game.prototype.checkCells = function(ary) {
 	for(var i = 0; i < ary.length; i++) {
 		if(this.state[ary[i]] != this.player()) {
@@ -45,14 +42,24 @@ Game.prototype.updateState = function(id) {
 	var mark = this.state[id] = this.player()
 	this.board.updateCell(id, mark);
 }
+Board.prototype.init = function() {
+	this.buildBoard();
+	this.addIds();
+}
 Board.prototype.buildBoard = function() {
-	var rows = ['<tr>', '<tr>', '<tr>'];
-	var cells = ['<td></td>', '<td></td>', '<td></td>'];
+	var rows = this.createRowArray(3, '<tr>');
+	var cells = this.createColumnArray(3, '<td></td>');
 	$('table').append(rows);
 	$('tr').append(cells);
 }
-function createRowArray {
-	new Array(5+1).join('0').split('')
+Board.prototype.createRowArray = function(size, element) {
+	return this.createArray(size, element)
+}
+Board.prototype.createColumnArray = function(size, element) {
+	return this.createArray(size, element)
+}
+Board.prototype.createArray = function(size, element) {
+	return Array.apply(null, new Array(size)).map(String.prototype.valueOf,element)
 }
 Board.prototype.addIds = function() {
 	$('td').each(function(i, cell) {
