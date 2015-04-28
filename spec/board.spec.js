@@ -3,7 +3,7 @@ describe('board', function() {
   // you should have 9 elements on the page
   // on the next line, put the jquery selector to find those elements
   // replace with your jquery selector
-  var selector = "td"
+  var selector = ".small-box"
   var board;
   var game;
   beforeEach(function() {
@@ -11,13 +11,14 @@ describe('board', function() {
     game = new Game();
   });
 
-  describe( "#createRowArray", function() {
+  // the specs with xdescribe are suggested but not required functions
+  xdescribe( "#createRowArray", function() {
     it("should do return an array of size x filled the element passed to it", function() {
       expect(board.createRowArray(3, "<tr>")).toEqual(["<tr>", "<tr>", "<tr>"]);
     });     
   });
 
-  describe( "#createRowArray", function() {
+  xdescribe( "#createRowArray", function() {
     it("should do return an array of size x filled the element passed to it", function() {
       expect(board.createColumnArray(3, "<td></td>")).toEqual(["<td></td>", "<td></td>", "<td></td>"]);
     });     
