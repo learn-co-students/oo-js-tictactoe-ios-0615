@@ -8,7 +8,7 @@ describe('board', function() {
   var game;
   beforeEach(function() {
     board = new Board();
-    game = new Game(board);
+    game = new Game();
   });
 
   describe( "#createRowArray", function() {

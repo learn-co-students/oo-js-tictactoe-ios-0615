@@ -45,7 +45,7 @@ Game.prototype.updateState = function(id) {
 
 Game.prototype.createState = function() {
   var ary = []; // new Array();
-  for(var i = 0; i <= 9; i++) {
+  for(var i = 0; i < 9; i++) {
     ary.push(null);
   }
   this.state = ary;

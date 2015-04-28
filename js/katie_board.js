@@ -1,13 +1,13 @@
 function Board() {}
 Board.prototype.init = function() {
   this.buildBoard();
+  this.addIds();
 }
 Board.prototype.buildBoard = function() {
   var rows = this.createRowArray(3, '<div class="box-row"></div>');
   var cells = this.createColumnArray(3, '<div class="small-box"></div>');
   $('body').append(rows);
   $('.box-row').append(cells);
-  this.addIds();
 }
 Board.prototype.createRowArray = function(size, element) {
   return this.createArray(size, element)
@@ -28,7 +28,7 @@ Board.prototype.updateCell = function(id, mark) {
 }
 Board.prototype.addEvents = function(game) {
   var that = this;
-  $('td').click(function() {
+  $('div').click(function() {
     game.doTurn($(this).attr('id'));
   })
 }
