@@ -35,9 +35,6 @@ describe('board', function() {
     it("should build a board", function() {
       setFixtures('<body></body>');
       board.buildBoard();
-      // you should have 9 elements on the page
-      // on the next line, put the jquery selector to find those elements
-      // replace with your jquery selector
       var myElements = $(selector)
       expect(myElements.size()).toEqual(9);
     });     
