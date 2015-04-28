@@ -7,8 +7,6 @@ resources: 3
 
 # Object Oriented Tic-Tac-Toe with jQuery
 
-![tic-tac-toe](https://s3-us-west-2.amazonaws.com/web-dev-readme-photos/js/tic-tac-toe.png)
-
 ## Contents
 
 * Objective
