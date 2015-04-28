@@ -61,7 +61,7 @@ The `tictactoe.html` file has script tags that load the JavaScript files in orde
 
 ## Running your Server
 
-When you run `python -m SimpleHTTPServer` from the root directory, the Python server will load the `tictactoe.html` file.  This html file has script tags which load the required JavaScripts in the correct order.
+When you run `python -m SimpleHTTPServer` from the root directory, the Python server will load the `tictactoe.html` file. Then in your browser use `http://localhost:8000/`. 
 
 ## Note on the Testing Suite
 
