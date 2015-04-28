@@ -3,7 +3,7 @@ describe('board', function() {
   // you should have 9 elements on the page
   // on the next line, put the jquery selector to find those elements
   // replace with your jquery selector
-  var selector = ".small-box"
+  var selector = "td"
   var board;
   var game;
   beforeEach(function() {

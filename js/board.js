@@ -30,6 +30,7 @@ Board.prototype.updateCell = function(id, mark) {
 Board.prototype.addEvents = function(game) {
   var that = this;
   $('td').click(function() {
-    game.doTurn($(this).attr('id'));
+    var id = Number($(this).attr('id'));
+    game.doTurn(id);
   })
 }
