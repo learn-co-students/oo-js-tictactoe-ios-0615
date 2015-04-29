@@ -56,6 +56,7 @@ describe('game', function() {
     it("should tell me if there is a winning combo on the board for the current player (vertical)", function() {
       game.init(board);
       spyOn(board, "updateCell")
+      spyOn(game, "message")
       game.doTurn(0);
       game.doTurn(1);
       game.doTurn(2);
@@ -63,7 +64,7 @@ describe('game', function() {
       game.doTurn(4);
       game.doTurn(5);
       game.doTurn(6);
-      expect(game.checkWinner()).toBe(true)
+      expect(game.message).toHaveBeenCalledWith("Player X Won!")
     });     
   });
 
@@ -71,12 +72,13 @@ describe('game', function() {
     it("should tell me if there is a winning combo on the board for the current player (diagonal)", function() {
       game.init(board);
       spyOn(board, "updateCell")
+      spyOn(game, "message")
       game.doTurn(0);
       game.doTurn(1);
       game.doTurn(4);
       game.doTurn(2);
       game.doTurn(8);
-      expect(game.checkWinner()).toBe(true)
+      expect(game.message).toHaveBeenCalledWith("Player X Won!")
     });     
   });
 

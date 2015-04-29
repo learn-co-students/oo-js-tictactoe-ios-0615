@@ -30,13 +30,16 @@ Game.prototype.player = function() {
   }
 }
 Game.prototype.doTurn = function(id){
-  // increment turn
-  this.turn++;
   // update our boards state
   this.updateState(id);
   if(this.checkWinner() == true) {
-    alert("You Won!");
+    this.message("Player " + this.player() + " Won!")
   }
+  // increment turn
+  this.turn++;
+}
+Game.prototype.message = function (message) {
+  alert(message);
 }
 Game.prototype.updateState = function(id) {
   var mark = this.state[id] = this.player()
