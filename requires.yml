@@ -1,9 +1,10 @@
 # A list of javascript files required for the project, in dependency order
 javascripts:
   files:
+    - lib/jquery.min.js
     - js/board.js
     - js/game.js
-    - lib/jasmine-jquery.js
   specs:
+    - lib/jasmine-jquery.js
     - spec/board.spec.js
     - spec/game.spec.js
