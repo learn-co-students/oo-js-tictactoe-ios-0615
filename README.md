@@ -1,10 +1,3 @@
----
-language: JavaScript, js
-tags: selectors, jquery, oo
-type: lab
-resources: 3
----
-
 # Object Oriented Tic-Tac-Toe with jQuery
 
 ## Contents
