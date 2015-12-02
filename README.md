@@ -67,3 +67,5 @@ To use `debugger`, add `debugger;` to your code, save, and run `ironboard -b`. I
 * [Intro to OO JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
 * [jQuery API - Selectors](http://api.jquery.com/category/selectors/)
 * [jQuery API - Events - Click](http://api.jquery.com/click/)
+
+<a href='https://learn.co/lessons/oo-js-tictactoe' data-visibility='hidden'>View this lesson on Learn.co</a>
